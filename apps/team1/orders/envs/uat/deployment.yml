@@ -1,0 +1,15 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-go-deployment
+spec:
+  template:
+    spec:
+      containers:
+        - name: backend-go
+          env:
+            - name: ENV
+              value: "uat"
+            - name: FEATURE_1_ENABLED
+              value: "0"

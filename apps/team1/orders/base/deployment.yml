@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-go-deployment
+  annotations:
+    warachet/app: backend-go
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend-go
+  template:
+    metadata:
+      labels:
+        app: backend-go
+    spec:
+      containers:
+        - name: backend-go
+          imagePullPolicy: Always
+          image: warachet/go-app:latest
+          ports:
+            - containerPort: 8080

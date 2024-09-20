@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-go-service
+spec:
+  type: ClusterIP
+  selector:
+    app: backend-go
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
