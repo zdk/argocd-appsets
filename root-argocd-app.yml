@@ -11,6 +11,7 @@ spec:
     path: appsets
   destination:
     # server: https://kubernetes.default.svc
+    server: https://86f455be-be3d-432e-9b03-c363b2fa6829.ap-south-2-gw.linodelke.net:443
     namespace: argocd
   syncPolicy:
     syncOptions:
